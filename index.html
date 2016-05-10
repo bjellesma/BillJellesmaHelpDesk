@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<!-- Tells the browser to render the page using the HTML5 specification -->
+<!-- Defines the documents primary language as English -->
+<html lang="en">
+  <head>
+    <!-- Defines the documents encoding character set (Multi-lingual Universal Transformation Format) -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Bill Jellesma Helpdesk">
+    <!-- Defines the location of a style sheet -->
+    <link rel="stylesheet" href="styles.css"/>
+    <!-- References a icon (16 x 16) to associate with your page. Save it in the root directory for IE -->
+    <link rel="icon" href="favicon.ico"/>
+    <!-- TODO change jquery to compressed in production -->
+    <script type="text/javascript" src="jquery_uncompressed.js"></script>
+    <script type="text/javascript" src="http://www.the-art-of-web.com/ajaxrequest.js"></script>
+    <script type="text/javascript" src="stars.js"></script>
+    <script type="text/javascript" src="slider.js"></script>
+
+    <!-- The following is a simple js function to check that all the check boxes on the form are filled out -->
+    <script type="text/javascript">
+
+      function checkForm(form)
+      {
+        if(this.name.value == "") {
+          alert("Please enter your Name in the form");
+          this.name.focus();
+          return false;
+        }
+        if(this.email.value == "" || !this.valid_email.checked) {
+          alert("Please enter a valid Email address");
+          this.email.focus();
+          return false;
+        }
+        alert("Success!  The form has been completed, validated and is ready to be submitted...");
+        return false;
+      }
+
+    </script>
+    <title>Bill Jellesma Help Desk</title>
+    </head>
+  <body onload="starfill();">
+    <header id="header">
+      <!-- the jquery slider will go here -->
+      <div id="slider">
+                      <ul class="slides">
+                          <li class="slide slide1"><img src="images/image1.jpg"/></li>
+                          <li class="slide slide2"><img src="images/image2.jpg"/></li>
+                          <li class="slide slide3"><img src="images/image3.jpg"/></li>
+                          <li class="slide slide3"></li>
+                      </ul>
+                  </div>
+
+    </header>
+    <main id="main">
+      <canvas id="starsBG" width="100%" height="100%">
+      </canvas>
+      <!-- the bg, thickbox, and picture will go here-->
+    </main>
+    <footer id="footer">
+      <!-- the contact form will go here -->
+      <form method="POST" action="" onsubmit="return checkForm(this);">
+        <fieldset>
+        <!-- We use onchange on our form because it processes as soon as the form is unfocused and will give us valueable feedback -->
+        <!-- We are replacing any special characters using a regular expression -->
+        <p>Name: <input type="text" size="32" name="name" onchange="this.value = this.value.replace(/^\s+|\s+$/g, ''); valid_name.checked = this.value;">
+          <input type="checkbox" disabled name="valid_name"></p>
+        <p>Email: <input type="text" size="32" id="email" name="email" onchange="if(this.value != '') ajaxValidate('checkEmail', this.value, this.id);">
+          <input id="valid_email" type="checkbox" disabled name="valid_email"></p>
+          <!-- An empty comment is needed by some older browsers -->
+          <div id="rsp_email"><!-- --></div>
+        <p><input type="submit"></p>
+        </fieldset>
+      </form>
+      <script type="text/javascript">
+        function ajaxValidate(method, value, target){
+          if(encodeURIComponent){
+            var req = new AjaxRequest();
+            //encodeURIComponent will strip most special characters
+            var params = "method=" + method + "&value=" + encodeURIComponent(value) + "&target=" + target;
+            req.setMethod("POST");
+            req.loadXMLDoc('form-process.php', params);
+          }
+        }
+
+      </script>
+    </footer>
+  </body>
+</html>
