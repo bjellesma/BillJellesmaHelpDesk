@@ -17,6 +17,8 @@
     <script type="text/javascript" src="slider.js"></script>
     <script type="text/javascript" src="tab-panels.js"></script>
     <script type="text/javascript" src="lightbox.js"></script>
+    <!-- use the following to invoke the thickbox plugin-->
+
     <!-- The following is a simple js function to check that all the check boxes on the form are filled out -->
     <script type="text/javascript">
 
@@ -39,12 +41,13 @@
     </script>
     <title>Bill Jellesma Help Desk</title>
     </head>
-  <body onload="starfill();">
+  <body>
     <header id="header">
+      <a href='#' class="modal" data-content='content/test-modal.html'>Hello</a>
       <!-- the jquery slider will go here -->
       <div id="slider">
           <ul class="slides">
-              <li class="slide slide1"><img src="images/image1.jpg"/></li>
+              <li class="slide slide1"></li>
               <li class="slide slide2"><img src="images/image2.jpg"/></li>
               <li class="slide slide3"><img src="images/image3.jpg"/></li>
               <li class="slide slide3"></li>
@@ -98,6 +101,15 @@
           }
         }
 
+      </script>
+      <script type="text/javascript">
+      //creates an object with thickbox functionality
+        $('.modal').modal({
+          'thickbox': 'thickbox',
+          'close': 'modal-close',
+          'closeText': 'Goodbye',
+          'shade': 'thickbox-shade'
+        });
       </script>
     </footer>
   </body>

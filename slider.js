@@ -1,3 +1,4 @@
+//TODO e.preventDefault
 'use strict';
 //the way that this slider works is it stores all the images on one line so we basically need to move the margin left with this javascript code
 //set it to document load

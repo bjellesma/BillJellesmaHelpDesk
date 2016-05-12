@@ -1,3 +1,7 @@
+body {
+  margin:0;
+}
+
 #slider {
     width: 720px;
     height: 400px;
@@ -52,17 +56,18 @@
   display:block;
 }
 
-#thickbox {
+.thickbox {
   /*so that the webpage doesnt make space for the thickbox */
   position: absolute;
   left: 50%;
+  top: 50px;
   width: 70%;
-  max-width: 700px;
-  background-color: #fff
-  border: 1px solid #aaa;
+  padding: 30px;
+  background-color: #fff;
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 3px 3px 8px rgba(0,0,0,.6);
+  box-shadow: 3px 3px 8px rgba(0,0,0,.5);
+  -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   z-index: 2;
 }
