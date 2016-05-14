@@ -11,7 +11,7 @@
     case 'checkEmail':
       if (filter_var($value, FILTER_VALIDATE_EMAIL)) {
         $passed = true;
-        retval = '';
+        $retval = '';
       } else {
         $passed = false;
         $retval = "Give it another shot kid!";
