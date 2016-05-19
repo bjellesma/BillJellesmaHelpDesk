@@ -8,6 +8,11 @@
   $retval = '';
   switch($method)
   {
+    case 'checkName':
+      $passed = false;
+      $retval = 'Invalid characters have been removed';
+    break;
+
     case 'checkEmail':
       if (filter_var($value, FILTER_VALIDATE_EMAIL)) {
         $passed = true;
@@ -16,12 +21,9 @@
         $passed = false;
         $retval = "Not a valid email address. Give it another shot kid!";
       }
+    break;
 
-      case 'checkRequest':
-          $passed = true;
-          $retval = 'Aces!';
-        
-      break;
+    //insert other validation methods here
 
     default: exit;
   }
