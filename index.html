@@ -24,18 +24,24 @@
 
       function checkForm(form)
       {
-        if(this.name.value == "") {
-          alert("Please enter your Name in the form");
+        if(this.name.value == "" || this.valid_name.checked) {
           this.name.focus();
           return false;
         }
         if(this.email.value == "" || !this.valid_email.checked) {
-          alert("Please enter a valid Email address");
           this.email.focus();
           return false;
         }
         alert("Success!  The form has been completed, validated and is ready to be submitted...");
         return false;
+      }
+
+      function checkValid(){
+        if(document.getElementById('valid_name').checked &&
+           document.getElementById('valid_email').checked &&
+           document.getElementById('valid_request').checked){
+          $('#valid_submit').removeAttr("disabled");
+        }
       }
 
     </script>
@@ -80,17 +86,23 @@
     </main>
     <footer id="footer">
       <!-- the contact form will go here -->
+      <h2>All Fields are required</h2>
       <form method="POST" action="" onsubmit="return checkForm(this);">
         <fieldset>
         <!-- We use onchange on our form because it processes as soon as the form is unfocused and will give us valueable feedback -->
         <!-- We are replacing any special characters using a regular expression -->
-        <p>Name: <input type="text" size="32" name="name" onchange="this.value = this.value.replace(/^\s+|\s+$/g, ''); valid_name.checked = this.value;">
-          <input type="checkbox" disabled name="valid_name"></p>
-        <p>Email: <input type="text" size="32" id="email" name="email" onchange="if(this.value != '') ajaxValidate('checkEmail', this.value, this.id);">
+        <p>Name: <input type="text" size="32" name="name" onchange="this.value = this.value.replace(/^\s+|\s+$/g, ''); valid_name.checked = this.value;" onblur="checkValid();" >
+          <input type="checkbox" disabled name="valid_name" id='valid_name'></p>
+        <p>Email: <input type="text" size="32" id="email" name="email" onchange="if(this.value != '') ajaxValidate('checkEmail', this.value, this.id);" onblur="checkValid();" >
           <input id="valid_email" type="checkbox" disabled name="valid_email"></p>
           <!-- An empty comment is needed by some older browsers -->
           <div id="rsp_email"><!-- --></div>
-        <p><input type="submit"></p>
+        <p>Summary of request: <textarea id="request" name="request" onchange="if(this.value != '') ajaxValidate('checkRequest', this.value, this.id);" onblur="checkValid();" >
+
+          </textarea>
+          <input id="valid_request" type="checkbox" disabled name="valid_request"></p>
+          <div id="rsp_request"><!-- --></div>
+        <p><input type="submit" onclick="checkvalid();" id="valid_submit"></p>
         </fieldset>
       </form>
       <script type="text/javascript">
