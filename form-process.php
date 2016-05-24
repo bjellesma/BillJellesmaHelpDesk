@@ -9,8 +9,11 @@
   switch($method)
   {
     case 'checkName':
-      $passed = false;
-      $retval = 'Invalid characters have been removed';
+      //if(preg_match('/[^a-zA-Z ]/g', $value) >= 1){
+        //preg_replace('/[^a-zA-Z ]/g', '', $value);
+        $passed = true;
+        $retval = 'Invalid characters have been removed';
+      //}
     break;
 
     case 'checkEmail':
@@ -56,7 +59,6 @@
     $xml->command('setproperty',
       array('target' => "valid_$target", 'property' => 'checked', 'value' => 'false')
     );
-    $xml->command('focus', array('target' => $target));
 
   }
 

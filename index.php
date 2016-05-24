@@ -45,9 +45,9 @@
       <div id="slider">
           <ul class="slides">
             <!--These take too long in development to load the page (shitty hosting)-->
-              <!--<li class="slide slide1"><a href='#' class="modal" data-content='content/Sample1.html'><img src="images/image1.jpg"/></a></li>-->
-              <!--<li class="slide slide2"><a href='#' class="modal" data-content='content/Sample1.html'><img src="images/image2.jpg"/></a></li>-->
-              <!--<li class="slide slide3"><a href='#' class="modal" data-content='content/Sample1.html'><img src="images/image3.jpg"/></a></li>-->
+              <li class="slide slide1"><a href='#' class="modal" data-content='content/Sample1.html'><img src="images/image1.jpg"/></a></li>
+              <li class="slide slide2"><a href='#' class="modal" data-content='content/Sample1.html'><img src="images/image2.jpg"/></a></li>
+              <li class="slide slide3"><a href='#' class="modal" data-content='content/Sample1.html'><img src="images/image3.jpg"/></a></li>
               <li class="slide slide3"></li>
           </ul>
       </div>
@@ -85,8 +85,7 @@
             this.value = this.value.replace(/[^a-zA-Z ]/g, '');
             ajaxValidate('checkName', this.value, this.id);
           }"
-          onkeyup="valid_name.checked = this.value;
-          checkValid();">
+          onkeyup="checkValid();">
         <input type="checkbox" disabled name="valid_name" id='valid_name'></p>
         <div id="rsp_name"><!-- --></div>
         <p>Email: <input type="text" size="32" id="email" name="email" onkeyup="if(this.value != '') ajaxValidate('checkEmail', this.value, this.id);">
