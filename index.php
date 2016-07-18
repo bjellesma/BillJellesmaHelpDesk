@@ -8,12 +8,16 @@
     <!-- Defines the documents encoding character set (Multi-lingual Universal Transformation Format) -->
     <meta charset="UTF-8">
     <meta name="description" content="Bill Jellesma Helpdesk">
-    <!-- Defines the location of a style sheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css"/>
     <!-- References a icon (16 x 16) to associate with your page. Save it in the root directory for IE -->
     <link rel="icon" href="favicon.ico"/>
-    <!-- TODO change jquery to compressed in production -->
-    <script type="text/javascript" src="jquery_uncompressed.js"></script>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
     <script type="text/javascript" src="ajaxrequest.js"></script>
     <script type="text/javascript" src="stars.js"></script>
     <script type="text/javascript" src="slider.js"></script>
