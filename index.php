@@ -45,9 +45,9 @@
       <div id="slider">
           <ul class="slides">
             <!--These take too long in development to load the page (shitty hosting)-->
-              <li class="slide slide1"><a href='#' class="modal" data-content='content/Sample1.html'><img src="images/image1.jpg"/></a></li>
-              <li class="slide slide2"><a href='#' class="modal" data-content='content/Sample1.html'><img src="images/image2.jpg"/></a></li>
-              <li class="slide slide3"><a href='#' class="modal" data-content='content/Sample1.html'><img src="images/image3.jpg"/></a></li>
+              <li class="slide slide1"><a href='#' class="modal" data-content='content/Sample1.html'><img src="http://placekitten.com/200/300"/></a></li>
+              <li class="slide slide2"><a href='#' class="modal" data-content='content/Sample1.html'><img src="http://placekitten.com/200/300"/></a></li>
+              <li class="slide slide3"><a href='#' class="modal" data-content='content/Sample1.html'><img src="http://placekitten.com/200/300"/></a></li>
               <li class="slide slide3"></li>
           </ul>
       </div>
