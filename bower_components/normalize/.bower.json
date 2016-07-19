@@ -1,0 +1,11 @@
+{
+  "name": "normalize",
+  "_cacheHeaders": {
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "main": "index.css",
+  "_source": "https://github.com/necolas/normalize.css/",
+  "_target": "*",
+  "_originalSource": "https://github.com/necolas/normalize.css/",
+  "_direct": true
+}
