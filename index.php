@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bill Jellesma Helpdesk">
+    <!--TODO add media queries-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="bower_components/normalize/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="css/styles.css">
     <!-- References a icon (16 x 16) to associate with your page. Save it in the root directory for IE -->
     <link rel="icon" href="favicon.ico"/>
     <script   src="https://code.jquery.com/jquery-2.2.4.min.js"
