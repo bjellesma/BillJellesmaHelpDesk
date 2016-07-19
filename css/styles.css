@@ -60,31 +60,4 @@ img, embed, object, video {
 .tab-panels .panel.active {
   display: block; }
 
-.thickbox {
-  /*so that the webpage doesnt make space for the thickbox */
-  position: absolute;
-  left: 50%;
-  top: 50px;
-  width: 70%;
-  padding: 30px;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 5px;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  z-index: 2; }
-
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px; }
-
-.thickbox-shade {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1; }
-
 /*# sourceMappingURL=styles.css.map */

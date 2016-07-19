@@ -21,7 +21,6 @@
 
     <script type="text/javascript" src="ajaxrequest.js"></script>
     <script type="text/javascript" src="tab-panels.js"></script>
-    <script type="text/javascript" src="lightbox.js"></script>
     <!-- use the following to invoke the thickbox plugin-->
 
     <!-- The following is a simple js function to check that all the check boxes on the form are filled out -->
