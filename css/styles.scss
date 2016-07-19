@@ -1,3 +1,9 @@
+$site-heading-font-size:20px;
+$site-color: #b3ffff;
+$site-font-family: 'Lato', sans-serif;
+body{
+  background-color:$site-color;
+}
 img, embed, object, video
   { max-width:100%;}
 
@@ -12,7 +18,7 @@ img, embed, object, video
     width:70%;
     float:right;
     font-weight: 900;
-    font-size:20px;
+    font-size:$site-heading-font-size;
     font-family: 'Galada', cursive;
   }
   /* /Header /*
@@ -21,6 +27,15 @@ img, embed, object, video
 #wj_slider{
 
 }
+/* /Slider */
+
+/* Summary */
+#wj_summary {
+  font-family: $site-font-family;
+  font-weight: 600;
+}
+/* /Summary */
+
 .tab-panels ul {
     margin: 0;
     padding: 0;
