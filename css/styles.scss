@@ -1,12 +1,17 @@
 $site-heading-font-size:20px;
-$site-color: #b3ffff;
+$site-background-color: #131313;
 $site-font-family: 'Lato', sans-serif;
+$site-font-color: #fff;
+$site-nav-cols: 4;
 html, body, .container {
   height: 100%;
   width: 100%;
+
 }
 body{
-  background-color:$site-color;
+  background-color:$site-background-color;
+  color: $site-font-color;
+  display:flex;
 }
 img, embed, object, video
   { max-width:100%;}
@@ -42,19 +47,67 @@ img, embed, object, video
   outline:none;
   z-index:10000000000000;
 }
-#wj_nav{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#131313;  position:absolute; text-align:center;}
-#wj_nav ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
-#wj_nav li {display: block;   padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
-#wj_nav li:hover{display: block;    background:#181818; padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
-#wj_nav ul li a { text-decoration:none;  margin: 0px; color:#fff;}
-#wj_nav ul li a:hover {  color: #fff; text-decoration:none;}
-#wj_nav a{text-decoration:none; color:white;}
-#wj_nav a:hover{text-decoration:none; color:white;}
+#wj_nav{
+  z-index:1000000;
+  font-weight:bold;
+  font-size:0.8em;
+  width:100%;
+  background:#131313;
+  position:relative;
+  text-align:center;
+  display: none;
+}
+#wj_nav ul {
+  display:flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+#wj_nav li {
+  display: block;
+  padding:15px 0 15px 0;
+  border-bottom:#1d1f20 1px solid;
+  width:100% / $site-nav-cols;
+}
+#wj_nav li:hover{
+  display: block;
+  background:#fff;
+  padding:15px 0 15px 0;
+  border-bottom:#1d1f20 1px solid;
+}
+#wj_nav ul li a {
+  text-decoration:none;
+  margin: 0px; color:#fff;
+}
+#wj_nav ul li a:hover {
+  color: #fff;
+  text-decoration:none;
+}
+#wj_nav a{
+  text-decoration:none;
+  color:white;
+}
+#wj_nav a:hover{
+  text-decoration:none;
+  color:white;
+}
+@media screen and (min-width: 800px){
+  #wj_nav{
+    display:block;
+  }
+  .hamburger{
+    display:none;
+  }
+  .cross{
+    display:none;
+  }
+}
 /*/nav*/
 
 /* Header */
 #wj_header {
-  position: relative;
+  display: flex;
 }
 #wj_logo{
   float:left;
@@ -69,8 +122,22 @@ img, embed, object, video
 /* /Header /*
 
 /*Slider*/
-#wj_slider{
+#wj_main_pic {
+  width:100%;
+  order: 0;
+}
+@media screen and (min-width: 600px) and (max-width:800px){
+  #wj_main_pic{
+    max-width: 50%;
+    float: left;
+  }
+}
+@media screen and (min-width: 801px){
+  #wj_main_pic{
+    max-width: 450px;
+    margin-left: auto;
 
+  }
 }
 /* /Slider */
 
@@ -78,39 +145,61 @@ img, embed, object, video
 #wj_summary {
   font-family: $site-font-family;
   font-weight: 600;
+  width: 100%;
+  order:1;
+}
+@media screen and (min-width: 600px) and (max-width:800px){
+  #wj_summary{
+    padding-left: 20px;
+    max-width: 50%;
+    float: right;
+  }
+}
+@media screen and (min-width: 801px){
+  #wj_summary{
+    max-width: 450px;
+    font-weight:900;
+    float:left;
+  }
 }
 /* /Summary */
+#wj_recent_work {
 
-.tab-panels ul {
-    margin: 0;
-    padding: 0;
+}
+@media screen and (max-width:800px){
+  #wj_recent_work{
+    display:none;
+  }
+}
+@media screen and (min-width:801px){
+  #wj_recent_work {
+    display:block;
+    position:relative;
+    max-width:50%;
+    float:right;
+    padding-right:16%;
+  }
+
+}
+@media screen and (min-width:1201px){
+  #wj_recent_work {
+    display:block;
+    position:relative;
+    max-width:50%;
+    float:right;
+    padding-right:30%;
+  }
+
+}
+#wj_projects {
+  order:2;
+}
+@media screen and (min-width:801px){
+  #wj_twitter_box {
+    order:1;
+  }
 }
 
-.tab-panels ul li {
-  list-style-type: none;
-  display: inline-block;
-  background: #999;
-  margin: 0;
-  padding: 3px 10px;
-  border-radius: 10px 10px 0 0;
-  color: #fff;
-  font-weight: 200;
-  cursor: pointer;
-}
-.tab-panels ul li:hover {
-  color: #fff;
-  background: #666;
-}
-.tab-panels ul li.active {
-  color: #fff;
-  background: #666;
-}
-.tab-panels .panel {
-  display:none;
-  background: #c9c9c9;
-  padding: 30px;
-  border-radius: 0 0 10px 10px;
-}
-.tab-panels .panel.active {
-  display:block;
+#wj_twitter_box {
+  order:3;
 }

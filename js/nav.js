@@ -1,6 +1,5 @@
 $( document ).ready(function(){
   $( ".cross" ).hide();
-  $( "#wj_nav" ).hide();
   $( ".hamburger" ).click(function() {
     console.log("hamburger clicked");
     $( "#wj_nav" ).slideToggle( "slow", function() {
