@@ -3,6 +3,11 @@ $site-background-color: #131313;
 $site-font-family: 'Lato', sans-serif;
 $site-font-color: #fff;
 $site-nav-cols: 4;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 html, body, .container {
   height: 100%;
   width: 100%;
@@ -115,7 +120,7 @@ img, embed, object, video
 #wj_heading {
   width:70%;
   float:right;
-  font-weight: 900;
+  font-weight: 1200;
   font-size:$site-heading-font-size;
   font-family: 'Galada', cursive;
 }
@@ -164,28 +169,42 @@ img, embed, object, video
 }
 /* /Summary */
 #wj_recent_work {
-
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 16px;
 }
+.wj_recent_work_item {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em 0;
+  line-height: 19.2px;
+}
+.wj_recent_work_item a {
+  text-decoration: none;
+  color: #666;
+}
+
+.wj_recent_work_item a:hover,
+.wj_recent_work_item a:active {
+  text-decoration: underline;
+}
+
 @media screen and (max-width:800px){
-  #wj_recent_work{
+  #wj_recent_work, .wj_recent_work_item {
     display:none;
   }
 }
-@media screen and (min-width:801px){
+@media screen and (min-width:990px) and (max-width:1200px){
   #wj_recent_work {
     display:block;
     position:relative;
-    max-width:50%;
-    float:right;
     padding-right:16%;
   }
 
 }
-@media screen and (min-width:1201px){
+@media screen and (min-width:1601px){
   #wj_recent_work {
     display:block;
     position:relative;
-    max-width:50%;
     float:right;
     padding-right:30%;
   }

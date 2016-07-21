@@ -61,9 +61,23 @@
         </ul>
       </nav>
       <img id="wj_main_pic"src="images/profile-pic.jpg" alt="main picture" />
-      <div id="wj_recent_work">
+      <section id="wj_recent_work">
         <h2 class="h2">Recent Work</h2>
-      </div>
+        <ul>
+          <li class="wj_recent_work_item">
+            <a href="#">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.</a>
+          </li>
+          <li class="wj_recent_work_item">
+            <a href="#">Squid lomo Kickstarter art lomo Kickstarter art party cronut scenester.</a>
+          </li>
+          <li class="wj_recent_work_item">
+            <a href="#">Organic raw denim lomo Kickstarter art Vice keffiyeh four loko.</a>
+          </li>
+          <li class="wj_recent_work_item">
+            <a href="#">Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</a>
+          </li>
+        </ul>
+      </section>
       <main id="main">
 
         <!-- bootstrap-->
@@ -77,13 +91,10 @@
             </p>
           </div>
         </div>
-        <div class="clearfix"></div>
-        <div class="col-md-12">
           <img id="wj_twitter_box"src="http://placehold.it/358x358">
           <div id="wj_projects">
             <h2 class="h2">Projects</h2>
           </div>
-        </div>
         <!-- /bootstrap -->
 
         <!-- the bg, thickbox, and picture will go here-->
