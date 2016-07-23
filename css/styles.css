@@ -160,4 +160,8 @@ img, embed, object, video {
 .wj_recent_work_item a:active {
   text-decoration: underline; }
 
+/* form */
+#wj_name, #wj_email, #wj_request {
+  color: #000; }
+
 /*# sourceMappingURL=styles.css.map */

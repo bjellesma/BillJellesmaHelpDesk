@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<?php require 'functions.php'; $globals = new Globals(); ?>
+<?php require 'functions.php';
+$globals = new Globals(); ?>
 <html lang="en">
   <head>
 

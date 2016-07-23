@@ -19,9 +19,12 @@
   <p>Gruntjs is a taskrunner that I've used to help compile my sass code into css that the browser can interpret</p>
   <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
   <p>Bootstrap is an HTML5/CSS3 framework that I use to help structure my website</p>
+  <li><a href="https://github.com/PHPMailer/PHPMailer">PHPMailer</a>
+  <p>PHPMailer is used as a secure way to send email</p>
 </ul>
 <h2><a name="editing-guide">Editing Guide</a></h2>
 <p>To make edits, please use the following guide</p>
 <ul>
   <li>To make any changes to the front end, please check <a href="http://getbootstrap.com/">Bootstrap's documentation</a> to see if the task can be accomplished that way</li>
   <li>When looking to make changes to the styles of the website, please use the .scss files in the css directory and compile into .css files if possible</li>
+  <li>To create any page, make sure to make the page with the php file extention and include the head.php file</li>
