@@ -1,8 +1,18 @@
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
 $site-heading-font-size:20px;
 $site-background-color: #131313;
 $site-font-family: 'Lato', sans-serif;
 $site-font-color: #fff;
 $site-nav-cols: 4;
+$breakpoints: (
+  x-small: 600px,
+  small: 800px,
+  large: 1300px
+);
 ul {
   list-style: none;
   padding: 0;
@@ -21,6 +31,23 @@ body{
 img, embed, object, video
   { max-width:100%;}
 
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+@media screen and (min-width:1300px){
+  .container {
+    max-width:1300px;
+  }
+}
 /*nav*/
 .hamburger{
   background:none;
@@ -61,6 +88,10 @@ img, embed, object, video
   position:relative;
   text-align:center;
   display: none;
+  /*call to mixin */
+  @include respond-to(x-small) {
+      display:block;
+  }
 }
 #wj_nav ul {
   display:flex;
@@ -97,10 +128,7 @@ img, embed, object, video
   text-decoration:none;
   color:white;
 }
-@media screen and (min-width: 800px){
-  #wj_nav{
-    display:block;
-  }
+@media screen and (min-width: 600px){
   .hamburger{
     display:none;
   }
@@ -130,20 +158,11 @@ img, embed, object, video
 #wj_main_pic {
   width:100%;
   order: 0;
-}
-@media screen and (min-width: 600px) and (max-width:800px){
-  #wj_main_pic{
-    max-width: 50%;
-    float: left;
+  @include respond-to(x-small) {
+    width:512px;
   }
 }
-@media screen and (min-width: 801px){
-  #wj_main_pic{
-    max-width: 450px;
-    margin-left: auto;
 
-  }
-}
 /* /Slider */
 
 /* Summary */
@@ -153,20 +172,6 @@ img, embed, object, video
   width: 100%;
   order:1;
 }
-@media screen and (min-width: 600px) and (max-width:800px){
-  #wj_summary{
-    padding-left: 20px;
-    max-width: 50%;
-    float: right;
-  }
-}
-@media screen and (min-width: 801px){
-  #wj_summary{
-    max-width: 450px;
-    font-weight:900;
-    float:left;
-  }
-}
 /* /Summary */
 #wj_recent_work {
   font-weight: 300;
@@ -174,51 +179,31 @@ img, embed, object, video
   font-size: 16px;
 }
 .wj_recent_work_item {
+  text-align: center;
   border-bottom: 1px solid #E0E0E0;
-  padding: 1em 0;
-  line-height: 19.2px;
+  padding: 20px;
+  display: inline-block;
+  width:100%;
+  @include respond-to(large) {
+    max-width:440px;
+  }
 }
 .wj_recent_work_item a {
   text-decoration: none;
   color: #666;
+  @include respond-to(large) {
+    float:right;
+    vertical-align: middle;
+  }
+}
+.wj_recent_work_item img{
+  @include respond-to(large) {
+    max-width:300px;
+    float:left;
+  }
 }
 
 .wj_recent_work_item a:hover,
 .wj_recent_work_item a:active {
   text-decoration: underline;
-}
-
-@media screen and (max-width:800px){
-  #wj_recent_work, .wj_recent_work_item {
-    display:none;
-  }
-}
-@media screen and (min-width:990px) and (max-width:1200px){
-  #wj_recent_work {
-    display:block;
-    position:relative;
-    padding-right:16%;
-  }
-
-}
-@media screen and (min-width:1601px){
-  #wj_recent_work {
-    display:block;
-    position:relative;
-    float:right;
-    padding-right:30%;
-  }
-
-}
-#wj_projects {
-  order:2;
-}
-@media screen and (min-width:801px){
-  #wj_twitter_box {
-    order:1;
-  }
-}
-
-#wj_twitter_box {
-  order:3;
 }

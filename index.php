@@ -60,103 +60,44 @@
           <li>Github</li>
         </ul>
       </nav>
-      <img id="wj_main_pic"src="images/profile-pic.jpg" alt="main picture" />
-      <section id="wj_recent_work">
-        <h2 class="h2">Recent Work</h2>
-        <ul>
-          <li class="wj_recent_work_item">
-            <a href="#">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.</a>
-          </li>
-          <li class="wj_recent_work_item">
-            <a href="#">Squid lomo Kickstarter art lomo Kickstarter art party cronut scenester.</a>
-          </li>
-          <li class="wj_recent_work_item">
-            <a href="#">Organic raw denim lomo Kickstarter art Vice keffiyeh four loko.</a>
-          </li>
-          <li class="wj_recent_work_item">
-            <a href="#">Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</a>
-          </li>
-        </ul>
-      </section>
-      <main id="main">
-
-        <!-- bootstrap-->
-        <div class="col-md-12">
+      <div class="col-md-12">
+        <div class="col-md-6">
+          <picture>
+            <img id="wj_main_pic"src="images/profile-pic.jpg" alt="main picture" />
+          </picture>
           <div id="wj_summary">
             <h2 class="h2">Who is Bill Jellesma?</h2>
-            <p>Bill Jellesma is a full stack engineer experienced located in the Worcester, Massachusetts area.
-              I have a clear passion in technology as well as technical prowess to apply it.
+            <p>I am a full stack engineer located in the Worcester, Massachusetts area.
+              I have a clear passion in technology as well as the technical prowess to apply it.
               My goal is to use my knowledge to help create and further applications that will benefit society.
-              If you're interested in projects I've accomplished, please read on!
+              If you're interested in projects I've accomplished and want to learn more, please read on!
             </p>
           </div>
         </div>
-          <img id="wj_twitter_box"src="http://placehold.it/358x358">
-          <div id="wj_projects">
-            <h2 class="h2">Projects</h2>
-          </div>
-        <!-- /bootstrap -->
-
-        <!-- the bg, thickbox, and picture will go here-->
-      </main>
-      <footer id="footer">
-        <!-- the contact form will go here -->
-        <h2>All Fields are required</h2>
-        <form method="POST" action="sendMail.php">
-          <fieldset>
-          <!-- We use onchange on our form because it processes as soon as the form is unfocused and will give us valueable feedback -->
-          <!-- We are replacing any special characters using a regular expression -->
-          <p>Name: <input type="text" size="32" name="name" id="name" onblur="
-            if(!(this.value.match(/[^a-zA-Z ]/g) === '')){
-              this.value = this.value.replace(/[^a-zA-Z ]/g, '');
-              ajaxValidate('checkName', this.value, this.id);
-            }"
-            onkeyup="checkValid();">
-          <input type="checkbox" disabled name="valid_name" id='valid_name'></p>
-          <div id="rsp_name"><!-- --></div>
-          <p>Email: <input type="text" size="32" id="email" name="email" onkeyup="if(this.value != '') ajaxValidate('checkEmail', this.value, this.id);">
-            <input id="valid_email" type="checkbox" disabled name="valid_email"></p>
-            <!-- An empty comment is needed by some older browsers -->
-            <div id="rsp_email"><!-- --></div>
-          <p>Summary of request: <textarea id="request" name="request" onkeyup="this.value = this.value.replace(/^\s+|\s+$/g, ''); valid_request.checked = this.value; checkValid();">
-
-            </textarea>
-            <input id="valid_request" type="checkbox" disabled name="valid_request"></p>
-            <div id="rsp_request"><!-- --></div>
-          <p><input type="submit" disabled id="valid_submit"></p>
-          </fieldset>
-        </form>
-        <script type="text/javascript">
-          function ajaxValidate(method, value, target){
-            if(encodeURIComponent){
-              var req = new AjaxRequest();
-              //encodeURIComponent will strip most special characters
-              var params = "method=" + method + "&value=" + encodeURIComponent(value) + "&target=" + target;
-              req.setMethod("POST");
-              req.loadXMLDoc('form-process.php', params);
-            }
-            checkValid();
-
-
-          }
-          function checkValid(){
-            if(document.getElementById('valid_name').checked &&
-               document.getElementById('valid_email').checked &&
-               document.getElementById('valid_request').checked){
-              $('#valid_submit').removeAttr("disabled");
-            }
-          }
-
-        </script>
-        <script type="text/javascript">
-        //creates an object with thickbox functionality
-          $('.modal').modal({
-            'thickbox': 'thickbox',
-            'close': 'modal-close',
-            'closeText': 'Goodbye',
-            'shade': 'thickbox-shade'
-          });
-        </script>
+        <div class="col-md-6">
+          <section id="wj_recent_work">
+            <h2 class="h2">Recent Work</h2>
+              <li class="wj_recent_work_item">
+                <img src="images/PyChat-1.PNG">
+                <a href="#">PyChat</a>
+              </li>
+              <li class="wj_recent_work_item">
+                <a href="#">Squid lomo Kickstarter art lomo Kickstarter art party cronut scenester.</a>
+              </li>
+              <li class="wj_recent_work_item">
+                <a href="#">Organic raw denim lomo Kickstarter art Vice keffiyeh four loko.</a>
+              </li>
+              <li class="wj_recent_work_item">
+                <a href="#">Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</a>
+              </li>
+          </section>
+        </div>
+      </div>
+      <!--This is where the form went-->
+      <footer id="wj_footer">
+        <ul>
+          <li><a href="https://twitter.com/bjellz"><i class="zocial-twitter"></a></li>
+        </ul>
       </footer>
     </div>
   </body>

@@ -3,7 +3,7 @@ $( document ).ready(function(){
   $( ".hamburger" ).click(function() {
     console.log("hamburger clicked");
     $( "#wj_nav" ).slideToggle( "slow", function() {
-    $( ".hamburger" ).hide();
+      $( ".hamburger" ).hide();
       $( ".cross" ).show();
     });
   });
