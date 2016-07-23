@@ -102,15 +102,10 @@ img, embed, object, video
 }
 #wj_nav li {
   display: block;
+  background: transparent;
   padding:15px 0 15px 0;
   border-bottom:#1d1f20 1px solid;
   width:100% / $site-nav-cols;
-}
-#wj_nav li:hover{
-  display: block;
-  background:#fff;
-  padding:15px 0 15px 0;
-  border-bottom:#1d1f20 1px solid;
 }
 #wj_nav ul li a {
   text-decoration:none;
@@ -118,7 +113,7 @@ img, embed, object, video
 }
 #wj_nav ul li a:hover {
   color: #fff;
-  text-decoration:none;
+  text-decoration:underline;
 }
 #wj_nav a{
   text-decoration:none;
@@ -184,23 +179,15 @@ img, embed, object, video
   padding: 20px;
   display: inline-block;
   width:100%;
-  @include respond-to(large) {
-    max-width:440px;
-  }
+  max-width: 440px;
 }
 .wj_recent_work_item a {
   text-decoration: none;
   color: #666;
-  @include respond-to(large) {
-    float:right;
-    vertical-align: middle;
-  }
+
 }
 .wj_recent_work_item img{
-  @include respond-to(large) {
-    max-width:300px;
-    float:left;
-  }
+
 }
 
 .wj_recent_work_item a:hover,

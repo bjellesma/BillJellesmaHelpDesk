@@ -1,2 +1,0 @@
-next/previous buttons not working on slides
-if js function acts on navbar and then the window is resized, the buttons do not disappear properly
