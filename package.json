@@ -2,8 +2,8 @@
   "name": "grunt-getting-started",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-sass": "latest",
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "latest",
     "grunt-pagespeed": "^2.0.1",
     "grunt-responsive-images": "latest"

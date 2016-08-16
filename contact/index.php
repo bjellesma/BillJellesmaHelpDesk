@@ -31,8 +31,8 @@ if(isset($_GET['send'])){
   <!-- the following htmlentities will help prevent XSS, that is, inserting jscript -->
   <p>Name: <input type="text" size="32" name="name" id="wj_name"<?php echo isset($fields['name']) ? 'value="' . escape($fields['name']) . '"' : '' ?>>
   <p>Email: <input type="text" size="32" id="wj_email" name="email"<?php echo isset($fields['email']) ? 'value="' . escape($fields['email']) . '"' : '' ?>>
-  <p>Summary of request: <textarea id="wj_request" name="request"><?php echo isset($fields['request']) ? escape($fields['request']) : '' ?></textarea>
-  <p><input type="submit" id="wj_submit"></p>
+  <p>Message: <textarea rows="4" cols="50" id="wj_request" name="request"><?php echo isset($fields['request']) ? escape($fields['request']) : '' ?></textarea>
+  <p><input type="submit" style="color:#000" id="wj_submit"></p>
 </form>
 <?php
   //unset the session variables so that they do not persist throughout the session

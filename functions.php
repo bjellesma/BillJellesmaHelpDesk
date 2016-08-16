@@ -1,5 +1,11 @@
 <?php
   require_once('/PHP/security.php');
+
+/**
+  * Simple class used throughout the website to get directories
+  * and do other repetative tasks 
+  */
+
   class Globals{
     const DOMAIN = 'BillJellesmaHelpDesk';
     public function getDomain(){

@@ -1,7 +1,8 @@
 @import url(http://weloveiconfonts.com/api/?family=zocial);
 /* zocial */
 [class*="zocial-"]:before {
-  font-family: 'zocial', sans-serif; }
+  font-family: 'zocial', sans-serif;
+  font-size: 40px; }
 
 ul {
   list-style: none;

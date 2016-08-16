@@ -10,7 +10,7 @@ $globals = new Globals(); ?>
     <!--TODO add media queries-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="/<?php $globals->getDomain(); ?>/bower_components/normalize/index.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/<?php $globals->getDomain(); ?>/css/styles.css">
     <!-- References a icon (16 x 16) to associate with your page. Save it in the root directory for IE -->
     <link rel="icon" href="favicon.ico"/>
@@ -28,23 +28,23 @@ $globals = new Globals(); ?>
     <body>
 
     <div class="container">
-      <button class="hamburger">&#9776;</button>
-      <button class="cross">&#735;</button>
+        <button class="hamburger">&#9776;</button>
+        <button class="cross">&#735;</button>
 
-      <!--Header-->
-      <header id="wj_header">
-        <div id="wj_logo">
-          <img src="http://placekitten.com/30/30" alt="logo" />
-        </div>
-        <div id="wj_heading">
-          Bill Jellesma Help Desk
-        </div>
-      </header>
-      <nav id="wj_nav">
-        <ul>
-          <li><a href="/<?php $globals->getDomain(); ?>/">Home</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="/<?php $globals->getDomain(); ?>/contact/">Contact</a></li>
-          <li><a href="https://github.com/bjellesma">Github</a></li>
-        </ul>
-      </nav>
+        <!--Header-->
+        <header id="wj_header">
+          <div id="wj_logo">
+            <img src="http://placekitten.com/30/30" alt="logo" />
+          </div>
+          <div id="wj_heading">
+            Bill Jellesma Help Desk
+          </div>
+        </header>
+        <nav id="wj_nav">
+          <ul>
+            <li><a href="/<?php $globals->getDomain(); ?>/">Home</a></li>
+            <li><a href="/<?php $globals->getDomain(); ?>/blog/public">Blog</a></li>
+            <li><a href="/<?php $globals->getDomain(); ?>/contact/">Contact</a></li>
+            <li><a href="https://github.com/bjellesma">Github</a></li>
+          </ul>
+        </nav>

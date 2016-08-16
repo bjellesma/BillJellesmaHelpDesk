@@ -2,7 +2,6 @@
   require '../head.php';
   session_start();
   $doc = $_SERVER['DOCUMENT_ROOT'].'/BillJellesmaHelpDesk/private/server.php';
-  echo $doc;
   if(file_exists($doc)){
     require_once '../private/server.php';
     $wj_email_settings = new EmailSettings();

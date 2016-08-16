@@ -11,6 +11,13 @@
   <li>Start WampServer and wait for the icon to turn from red to yellow to green</li>
   <li>Download or clone this repository into C:\Wamp\www\</li>
   <li>Open a web browser and navigate to localhost\BillJellesmaHelpDesk in the address bar</li>
+  <li>Download and install <a href="https://nodejs.org/en/download/">nodejs</a></li>
+  <li>Use Node to install Grunt<br>
+  <code>npm install -g grunt-cli></code></li>
+  <li>install the grunt sass taskrunner with <br>
+  <code>npm install grunt-sass-contrib --save-dev</code></li>
+  <li>Download and install composer from <a href=""> Here</a></li>
+  <li>Migrate the current database over using <code>php artisan migrate</code
 </ol>
 <h2><a name="technologies">Technologies</a></h2>
 <p>I have used several technologies in this project in order to help my workflow. I've outlined these technologies here

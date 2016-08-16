@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace BillJellesmaBlog\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
@@ -22,7 +22,7 @@ class Authenticate
                 return response('Unauthorized.', 401);
             }
 
-            return redirect()->guest('login');
+            return redirect()->guest('signin')->with('info', 'You must be signed in to do that');
         }
 
         return $next($request);
