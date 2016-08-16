@@ -27,6 +27,7 @@ if(isset($_GET['send'])){
   </ul>
 </div>
 <?php endif; ?>
+<p>Would you like to get in contact with me and let me know how things are going? Fill out the form below to let me know!</p>
 <form method="POST" action="/<?php $globals->getPHPDir(); ?>/contact.php" id="wj_form">
   <!-- the following htmlentities will help prevent XSS, that is, inserting jscript -->
   <p>Name: <input type="text" size="32" name="name" id="wj_name"<?php echo isset($fields['name']) ? 'value="' . escape($fields['name']) . '"' : '' ?>>

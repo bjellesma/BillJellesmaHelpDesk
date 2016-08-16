@@ -10,10 +10,8 @@
       </header>
       <nav id="wj_nav">
         <ul>
-          <li><a href="/<?php echo env('SITE_NAME') ?>/">Home</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="/<?php echo env('SITE_NAME') ?>/contact/">Contact</a></li>
-          <li><a href="https://github.com/bjellesma">Github</a></li>
+          <li><a href="/<?php echo env('SITE_NAME') ?>/">Site Home</a></li>
+          <li><a href="/<?php echo env('SITE_NAME') ?>/blog/public/">Blog Home</a></li>
                                 @if(Auth::check())
                                 <li><a href="{{ route('profile.index', ['username' => Auth::user()->username]) }}">{{ Auth::user()->getNameOrUsername() }}</a></li>
                                 <li><a href="{{ route('profile.edit')}}">Update profile</a></li>
